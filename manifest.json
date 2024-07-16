@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Video Speed Controller",
+    "version": "1.0",
+    "description": "Control video speed up to 10x in 0.25 increments using '+' and '-' keys.",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
